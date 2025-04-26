@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZORGA - Driving Innovation, Connecting Leaders</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#008fd5', secondary: '#10b981' },
+          borderRadius: { button: '8px' }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .hero-section { position: relative; overflow: hidden; }
+    .scroll-indicator { animation: bounce 2s infinite; }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Hero Section -->
+  <section id="hero-bg" class="hero-section min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-6 py-20 relative z-10 text-center bg-white/50 rounded-xl">
+      <h1 class="text-6xl md:text-7xl font-bold mb-6 tracking-tight text-gray-700">We are</h1>
+      <img src="img/zorga-logo.png" alt="ZORGA Logo" class="w-[90vw] max-w-[800px] h-auto mx-auto mb-4 object-contain">
+      <p class="text-xl md:text-2xl text-gray-700 mb-12 max-w-2xl mx-auto">Driving Innovation, Connecting Leaders</p>
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
+        <a href="#about" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+          <i class="ri-arrow-down-line ri-lg"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">About Us</h2>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto">At Zorga Consulting LLC, we don't just organize events—we create experiences that leave a lasting impact on attendees, industries, and communities.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-16 items-center fade-in">
+        <div class="space-y-8">
+          <p class="text-lg text-gray-700">We specialize in creating high-impact conferences, summits, and corporate events that drive meaningful connections, foster innovation, and catalyze growth across industries. With our deep expertise in event management and technology, we transform ordinary gatherings into extraordinary experiences.</p>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-6 h-6 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                <i class="ri-check-line text-primary"></i>
+              </div>
+              <p class="text-gray-700">Strategic event planning and execution with measurable outcomes</p>
+            </div>
+            <div class="flex items-start">
+              <div class="w-6 h-6 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                <i class="ri-check-line text-primary"></i>
+              </div>
+              <p class="text-gray-700">Global network of industry leaders, speakers, and partners</p>
+            </div>
+            <div class="flex items-start">
+              <div class="w-6 h-6 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                <i class="ri-check-line text-primary"></i>
+              </div>
+              <p class="text-gray-700">Innovative technology solutions for enhanced event experiences</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="img/zorga-conference-meet.jpg" alt="Crafting Exceptional Events Worldwide" class="rounded-lg shadow-xl w-full h-auto object-cover object-top">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-lg">
+            <p class="text-white text-lg font-medium">"Crafting Exceptional Events Worldwide."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conference Section -->
+  <section class="py-24 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden fade-in">
+        <div class="p-8 md:p-12 text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Our flagship Conference</h2>
+          <div class="flex justify-center mb-8">
+            <div class="w-64 flex items-center justify-center">
+              <img src="https://static.readdy.ai/image/33aaabd8303e78e46e7b08ae877ed2e0/7818dcc32f73a6d1a0a297ec01a778d4.png" alt="AI WAQF Summit Logo" class="w-full h-auto">
+            </div>
+          </div>
+          <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">Join us for a groundbreaking conference exploring the intersection of artificial intelligence and Islamic endowments for sustainable development.</p>
+          <a href="https://ai-waqf.com/" class="inline-block border-2 border-primary text-primary px-8 py-3 rounded-button font-medium hover:bg-primary hover:text-white transition duration-300" target="_blank">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">Contact Us</h2>
+        <p class="text-xl text-gray-700 max-w-2xl mx-auto">Let's connect and create something impactful.</p>
+      </div>
+      <div class="max-w-4xl mx-auto fade-in">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Speaking Opportunities</h3>
+            <p class="text-gray-600 mb-6">Interested in speaking at the AI WAQF Summit 2025? Please contact:</p>
+            <p class="font-medium text-gray-900">Jaisimha Das</p>
+            <p class="text-gray-600"><i class="ri-phone-line"></i> +60 11 3989 5549 (M)</p>
+			<p class="text-gray-600"><i class="ri-mail-line"></i> <a href="mailto:jaisimha@ai-waqf.com" class="hover:text-primary">jaisimha@ai-waqf.com</a></p>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Sponsorship & Partnerships</h3>
+            <p class="text-gray-600 mb-6">For sponsorship decks, custom branding options, or exhibition queries:</p>
+            <p class="font-medium text-gray-900">Swaoop Mohan</p>
+            <p class="text-gray-600"><i class="ri-phone-line"></i> +91 95385 52552 (M)</p>
+            <p class="text-gray-600"><i class="ri-mail-line"></i> <a href="mailto:swaroop@ai-waqf.com" class="hover:text-primary">swaroop@ai-waqf.com</a></p>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Media & Press</h3>
+            <p class="text-gray-600 mb-6">Interested in covering the summit or scheduling interviews with our speakers?</p>
+            <p class="font-medium text-gray-900">Deepak Thomas</p>
+            <p class="text-gray-600"><i class="ri-phone-line"></i> +91 9743 020 505</p>
+            <p class="text-gray-600"><i class="ri-mail-line"></i> <a href="mailto:deepak@ai-waqf.com" class="hover:text-primary">deepak@ai-waqf.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <img src="img/zorga-white-logo.png" alt="ZORGA Logo" class="w-[40vw] max-w-[300px] h-auto mb-4 object-contain">
+          <p class="text-gray-400">Driving Innovation, Connecting Leaders</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center md:text-left">
+        <p class="text-gray-500">© 2025 Zorga Consulting LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal Vanta.js Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#hero-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x008fd5,
+      backgroundColor: 0xffffff,
+      points: 6.00,
+      maxDistance: 30.00,
+      spacing: 25.00,
+      lineColor: 0x008fd5,
+      lineOpacity: 0.15
+    });
+  </script>
+
+  <!-- Fade-in Animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      fadeElements.forEach(element => { observer.observe(element); });
+    });
+  </script>
+
+</body>
+</html>
