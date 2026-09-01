@@ -18,10 +18,10 @@
   --container: 1840px;
   --gutter: clamp(0.75rem, 1.5vw, 1.5rem);
 
-  --fs-hero: clamp(1.9rem, 9.7vw, 4.6rem); /* mobile-first; desktop overrides below */
-  --hero-weight: 750;
-  --hero-leading: 0.92;
-  --hero-tracking: -0.04em;
+  /* Hero lines are sized from the real content width so each spans it fully.
+     Divisors are measured width/font-size ratios (+1% fit margin) at wt 700,
+     ls -0.035em, uppercase. Re-measure if the words or the font change. */
+  --hero-w: calc(min(100vw, var(--container)) - 2 * var(--margin));
   --fs-display: clamp(2.3rem, 7.4vw, 8.5rem);
   --fs-h1: clamp(2rem, 5.4vw, 6rem);
   --fs-h2: clamp(1.65rem, 3.6vw, 4rem);
@@ -48,15 +48,6 @@
   --color-rule-strong: var(--rule-strong);
   --color-blue: var(--blue);
   --font-sans: var(--font-grotesk), "Helvetica Neue", Arial, sans-serif;
-}
-
-@media (min-width: 768px) {
-  :root {
-    --fs-hero: clamp(2.25rem, 8.9vw, 10.25rem);
-    --hero-weight: 650;
-    --hero-leading: 0.92;
-    --hero-tracking: -0.034em;
-  }
 }
 
 html { -webkit-text-size-adjust: 100%; }
@@ -106,11 +97,19 @@ body {
 /*  Typography                                                         */
 /* ------------------------------------------------------------------ */
 .t-hero {
-  font-size: var(--fs-hero);
-  line-height: var(--hero-leading);
-  letter-spacing: var(--hero-tracking);
-  font-weight: var(--hero-weight);
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  font-weight: 700;
   text-transform: uppercase;
+}
+.hero-l1 { font-size: calc(var(--hero-w) / 5.694); }
+.hero-l2 { font-size: calc(var(--hero-w) / 9.498); }
+.hero-l3 { font-size: calc(var(--hero-w) / 8.881); }
+/* Rendered tracking widens slightly at large sizes; recalibrated ratios. */
+@media (min-width: 768px) {
+  .hero-l1 { font-size: calc(var(--hero-w) / 5.747); }
+  .hero-l2 { font-size: calc(var(--hero-w) / 9.655); }
+  .hero-l3 { font-size: calc(var(--hero-w) / 9.016); }
 }
 .t-display {
   font-size: var(--fs-display);
@@ -203,17 +202,16 @@ body {
 /* ------------------------------------------------------------------ */
 /*  Hero intro (CSS only, < 1s, then completely still)                 */
 /* ------------------------------------------------------------------ */
-@keyframes rule-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes rise-in { from { transform: translate3d(0, 110%, 0); } to { transform: none; } }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-.hero-rule { transform-origin: left center; animation: rule-in 700ms var(--ease-out) 80ms both; }
 .hero-line { display: block; overflow: hidden; }
+.hero-l1, .hero-l2, .hero-l3 { white-space: nowrap; }
 .hero-line > span { display: block; animation: rise-in 800ms var(--ease-out) both; }
 .hero-line:nth-child(1) > span { animation-delay: 100ms; }
 .hero-line:nth-child(2) > span { animation-delay: 200ms; }
 .hero-line:nth-child(3) > span { animation-delay: 300ms; }
 .hero-fade { animation: fade-in 700ms var(--ease-out) 550ms both; }
-.no-motion .hero-rule, .no-motion .hero-line > span, .no-motion .hero-fade { animation: none; }
+.no-motion .hero-line > span, .no-motion .hero-fade { animation: none; }
 
 /* ------------------------------------------------------------------ */
 /*  Link underline                                                     */
