@@ -8,11 +8,9 @@ export function Statement() {
   return (
     <section id="statement" aria-labelledby="statement-title">
       <div className="wrap">
-        <div className="sec-bar">
-          <span className="t-micro text-mute">Zorga</span>
-        </div>
+        <div aria-hidden className="border-t border-rule" />
       </div>
-      <div className="wrap pt-[clamp(3rem,8vh,5.5rem)] pb-[clamp(2.5rem,6vh,4.5rem)]">
+      <div className="wrap pt-[clamp(3.5rem,9vh,6rem)] pb-[clamp(2.5rem,6vh,4.5rem)]">
         <h2 id="statement-title" className="t-display grid" data-reveal="lines">
           <Ml>Before there is</Ml>
           <Ml className="pl-[6vw] md:pl-[9vw]">an event,</Ml>

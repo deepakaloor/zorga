@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Wordmark } from "./Logo";
 import { nav } from "@/lib/site";
@@ -18,12 +17,14 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    const els = nav.map((n) => document.getElementById(n.href.slice(1))).filter(Boolean) as HTMLElement[];
+    const els = nav
+      .map((n) => document.getElementById(n.href.split("#")[1] ?? ""))
+      .filter(Boolean) as HTMLElement[];
     if (!els.length) return;
     const io = new IntersectionObserver(
       (entries) => {
         const hit = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-        if (hit) setActive(`#${hit.target.id}`);
+        if (hit) setActive(`/#${hit.target.id}`);
       },
       { rootMargin: "-30% 0px -60% 0px", threshold: 0 },
     );
@@ -41,9 +42,10 @@ export function Header() {
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${scrolled || open ? "bg-white border-b border-rule" : "border-b border-transparent"}`}>
       <div className="wrap flex items-center justify-between h-16 md:h-20">
-        <Link href="#top" aria-label="Zorga home" className="flex items-center">
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- full navigation guarantees a clean homepage state (next/link can resurrect a stale hash) */}
+        <a href="/" aria-label="Zorga home" className="flex items-center">
           <Wordmark height={27} />
-        </Link>
+        </a>
 
         <nav aria-label="Primary" className="hidden md:flex items-center gap-10">
           {nav.map((n) => (

@@ -22,6 +22,7 @@ export function Footer() {
           <nav aria-label="Footer" className="col-span-6 md:col-span-2 md:col-start-11 flex flex-col items-start gap-3">
             <Link href="/privacy" className="t-label u-line">Privacy</Link>
             <Link href="/terms" className="t-label u-line">Terms</Link>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- next/link drops /#hash navigations from other routes */}
             <a href="/#contact" className="t-label u-line">Contact</a>
           </nav>
         </div>

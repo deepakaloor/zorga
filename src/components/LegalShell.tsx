@@ -1,19 +1,13 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
-import { Wordmark } from "./Logo";
+import { Header } from "./Header";
 import { Footer } from "./Footer";
 
 export function LegalShell({ title, updated, children }: { title: string; updated: string; children: ReactNode }) {
   return (
     <>
-      <header className="border-b border-rule">
-        <div className="wrap h-16 md:h-[72px] flex items-center justify-between">
-          <Link href="/" aria-label="Zorga home"><Wordmark height={27} /></Link>
-          <Link href="/" className="t-label u-line">Home</Link>
-        </div>
-      </header>
-      <main className="flex-1">
-        <div className="wrap py-[clamp(2.5rem,6vh,4.5rem)]">
+      <Header />
+      <main className="flex-1 pt-16 md:pt-20">
+        <div className="wrap py-[clamp(3rem,8vh,6rem)]">
           <div className="grid12">
             <div className="col-span-12 lg:col-span-4">
               <p className="t-micro text-ink-2 mb-6">{title}</p>

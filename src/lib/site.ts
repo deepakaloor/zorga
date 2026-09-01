@@ -15,9 +15,14 @@ export const site = {
   region: "United Arab Emirates",
 } as const;
 
+/**
+ * Primary navigation. Root-relative hashes so the same header works from any
+ * route: on the homepage the browser treats them as in-page scrolls, from any
+ * other page they perform a normal navigation to the homepage section.
+ */
 export const nav = [
-  { href: "#approach", label: "Approach" },
-  { href: "#concepts", label: "Concepts" },
-  { href: "#work", label: "Work with us" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#approach", label: "Approach" },
+  { href: "/#concepts", label: "Concepts" },
+  { href: "/#work", label: "Work with us" },
+  { href: "/#contact", label: "Contact" },
 ] as const;

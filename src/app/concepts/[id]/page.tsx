@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { concepts, conceptPageIds, conceptHasPage } from "@/data/concepts";
-import { Wordmark } from "@/components/Logo";
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 /**
@@ -36,20 +35,10 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
 
   return (
     <>
-      <header className="border-b border-rule">
-        <div className="wrap h-16 md:h-20 flex items-center justify-between">
-          <Link href="/" aria-label="Zorga home" className="flex items-center">
-            <Wordmark height={27} />
-          </Link>
-          <nav aria-label="Concept page" className="flex items-center gap-8">
-            <a href="/#concepts" className="t-label u-line text-ink">All concepts</a>
-            <a href="/#contact" className="t-label u-line text-ink hidden sm:inline-flex">Contact</a>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
-      <main className="flex-1">
-        <div className="wrap pt-10 md:pt-14">
+      <main className="flex-1 pt-16 md:pt-20">
+        <div className="wrap pt-8 md:pt-10">
           <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-rule pb-4">
             <p className="t-micro text-ink-2">{c.marker}</p>
             <p className="t-micro text-mute">{c.status}</p>
@@ -89,6 +78,7 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
 
         <div className="wrap border-t border-rule py-[clamp(2.5rem,6vh,4.5rem)] flex flex-wrap items-baseline justify-between gap-6">
           <p className="t-lead text-ink-2" data-reveal>Bring us the question.</p>
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- next/link drops /#hash navigations from other routes */}
           <a href="/#contact" className="t-label u-line arrow-link inline-flex items-center gap-3 text-ink" data-reveal="fade">
             Start a conversation <span aria-hidden className="arr">→</span>
           </a>
