@@ -9,14 +9,14 @@ import { Ml } from "./Ml";
 export function EditorialImage() {
   return (
     <figure className="border-t border-rule">
-      <div className="wrap pt-[clamp(3.5rem,10vh,7rem)] pb-[clamp(4rem,12vh,9rem)]">
+      <div className="wrap pt-[clamp(2.5rem,6vh,4.5rem)] pb-[clamp(2rem,5vh,3.5rem)]">
         <figcaption>
           <h2 className="t-h2" data-reveal="lines">
             <Ml>A platform starts</Ml>
             <Ml>before the room fills<span className="text-blue">.</span></Ml>
           </h2>
         </figcaption>
-        <div className="grid12 mt-[clamp(2.5rem,7vh,5rem)]">
+        <div className="grid12 mt-[clamp(2rem,5vh,3.5rem)]">
           <div className="col-span-12 sm:col-span-11 sm:col-start-2 lg:col-span-8 lg:col-start-5" data-reveal="fade">
             <Image
               src="/assets/zorga-forum.png"

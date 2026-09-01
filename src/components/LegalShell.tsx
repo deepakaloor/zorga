@@ -13,7 +13,7 @@ export function LegalShell({ title, updated, children }: { title: string; update
         </div>
       </header>
       <main className="flex-1">
-        <div className="wrap py-[clamp(4rem,10vh,7rem)]">
+        <div className="wrap py-[clamp(2.5rem,6vh,4.5rem)]">
           <div className="grid12">
             <div className="col-span-12 lg:col-span-4">
               <p className="t-micro text-ink-2 mb-6">{title}</p>

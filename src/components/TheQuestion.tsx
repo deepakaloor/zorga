@@ -48,7 +48,7 @@ export function TheQuestion() {
       </div>
 
       {/* Desktop: sticky statement, right column swaps. */}
-      <div ref={trackRef} className="q-desktop relative hidden lg:block" style={{ height: `${questionItems.length * 85}vh` }}>
+      <div ref={trackRef} className="q-desktop relative hidden lg:block" style={{ height: `${questionItems.length * 70}vh` }}>
         <div aria-hidden className="absolute inset-0 grid" style={{ gridTemplateRows: `repeat(${questionItems.length}, 1fr)` }}>
           {questionItems.map((_, i) => (
             <div key={i} data-q-idx={i} />
@@ -72,7 +72,7 @@ export function TheQuestion() {
       </div>
 
       {/* Small screens / reduced motion: the same content, composed statically. */}
-      <div className="q-static lg:hidden wrap pt-[clamp(3.5rem,10vh,6rem)]">
+      <div className="q-static lg:hidden wrap pt-[clamp(2.5rem,6vh,4rem)]">
         <h2 className="t-h1">{statement}</h2>
         <ul className="mt-12">
           {questionItems.map((it) => (
@@ -85,7 +85,7 @@ export function TheQuestion() {
         </ul>
       </div>
 
-      <div className="wrap pt-[clamp(4rem,12vh,8rem)] pb-[clamp(5rem,16vh,11rem)]">
+      <div className="wrap pt-[clamp(2rem,5vh,3.5rem)] pb-[clamp(2.5rem,6vh,4.5rem)]">
         <p className="t-display text-right" aria-label="That is where Zorga starts." data-reveal="lines">
           <Ml>That is where</Ml>
           <Ml>Zorga starts<span className="text-blue">.</span></Ml>

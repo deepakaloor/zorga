@@ -15,18 +15,18 @@ export function Approach() {
         </div>
       </div>
 
-      <div className="wrap pt-[clamp(3.5rem,10vh,7rem)]">
+      <div className="wrap pt-[clamp(2.5rem,6vh,4.5rem)]">
         <h2 id="approach-title" className="t-display" data-reveal="lines">
           <Ml>Before execution,</Ml>
           <Ml>comes the thinking<span className="text-blue">.</span></Ml>
         </h2>
       </div>
 
-      <div className="wrap pt-[clamp(4rem,12vh,9rem)] pb-[clamp(5rem,14vh,10rem)]">
+      <div className="wrap pt-[clamp(2rem,5vh,3.5rem)] pb-[clamp(3rem,8vh,6rem)]">
         {approach.map((s, i) => (
           <div
             key={s.title}
-            className={`${i > 0 ? "mt-[clamp(4.5rem,14vh,11rem)]" : ""} ${i % 2 === 1 ? "lg:text-right" : ""}`}
+            className={`${i > 0 ? "mt-[clamp(3rem,9vh,6.5rem)]" : ""} ${i % 2 === 1 ? "lg:text-right" : ""}`}
           >
             <h3 className="t-h1" data-reveal="lines"><Ml>{s.title}</Ml></h3>
             <p

@@ -4,7 +4,7 @@ import { Ml } from "./Ml";
 export function Audience() {
   return (
     <section aria-labelledby="audience-title">
-      <div className="wrap border-t border-rule py-[clamp(5rem,15vh,11rem)] grid12 items-end">
+      <div className="wrap border-t border-rule py-[clamp(2.5rem,6vh,4.5rem)] grid12 items-end">
         <h2 id="audience-title" className="col-span-12 lg:col-span-7 t-h1" data-reveal="lines">
           <Ml>Built for</Ml>
           <Ml>people shaping</Ml>

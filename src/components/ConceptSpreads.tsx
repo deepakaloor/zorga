@@ -59,7 +59,7 @@ export function ConceptSpreads() {
         </div>
       </div>
 
-      <div className="wrap pt-[clamp(4rem,12vh,8rem)] pb-[clamp(4rem,10vh,7rem)] grid12 items-end">
+      <div className="wrap pt-[clamp(2rem,5vh,3.5rem)] pb-[clamp(2.5rem,6vh,4.5rem)] grid12 items-end">
         <h2 id="concepts-title" className="col-span-12 lg:col-span-8 t-display" data-reveal="lines">
           <Ml>Selected</Ml>
           <Ml>platform concepts</Ml>
@@ -70,9 +70,9 @@ export function ConceptSpreads() {
       </div>
 
       {/* IDGS — no separate page yet; the one line it needs lives here. */}
-      <article className="wrap pb-[clamp(5rem,14vh,10rem)]" aria-label={idgs.fullName}>
+      <article className="wrap pb-[clamp(3rem,8vh,6rem)]" aria-label={idgs.fullName}>
         <Meta c={idgs} />
-        <div className="grid12 pt-[clamp(2.5rem,7vh,5rem)]">
+        <div className="grid12 pt-[clamp(2rem,5vh,3.5rem)]">
           <div className="col-span-12 lg:col-span-6">
             <Question c={idgs} />
             <p className="t-body mt-8 max-w-[44ch]" data-reveal>{idgs.text}</p>
@@ -92,9 +92,9 @@ export function ConceptSpreads() {
       </article>
 
       {/* RevX — identity left, question right. */}
-      <article className="wrap pb-[clamp(5rem,14vh,10rem)]" aria-label={revx.fullName}>
+      <article className="wrap pb-[clamp(3rem,8vh,6rem)]" aria-label={revx.fullName}>
         <Meta c={revx} />
-        <div className="grid12 pt-[clamp(2.5rem,7vh,5rem)] items-start">
+        <div className="grid12 pt-[clamp(2rem,5vh,3.5rem)] items-start">
           <div className="col-span-8 sm:col-span-5 lg:col-span-3" data-reveal="fade">
             {revx.logo && (
               <Image src={revx.logo.src} alt={revx.logo.alt} width={revx.logo.width} height={revx.logo.height} className="w-full max-w-[16rem] h-auto" />
@@ -108,9 +108,9 @@ export function ConceptSpreads() {
       </article>
 
       {/* AI-WAQF — question left, identity right. */}
-      <article className="wrap pb-[clamp(5rem,14vh,10rem)]" aria-label={waqf.fullName}>
+      <article className="wrap pb-[clamp(3rem,8vh,6rem)]" aria-label={waqf.fullName}>
         <Meta c={waqf} />
-        <div className="grid12 pt-[clamp(2.5rem,7vh,5rem)] items-start">
+        <div className="grid12 pt-[clamp(2rem,5vh,3.5rem)] items-start">
           <div className="col-span-12 lg:col-span-7">
             <Question c={waqf} />
             <ConceptLink c={waqf} />
@@ -124,9 +124,9 @@ export function ConceptSpreads() {
       </article>
 
       {/* SourceScape — identity on its dark plate, question right. */}
-      <article className="wrap pb-[clamp(5rem,16vh,11rem)]" aria-label={scape.fullName}>
+      <article className="wrap pb-[clamp(2.5rem,6vh,4.5rem)]" aria-label={scape.fullName}>
         <Meta c={scape} />
-        <div className="grid12 pt-[clamp(2.5rem,7vh,5rem)] items-center">
+        <div className="grid12 pt-[clamp(2rem,5vh,3.5rem)] items-center">
           <div className="col-span-12 sm:col-span-8 lg:col-span-4">
             <div className="bg-ink px-8 py-14 flex items-center" data-reveal="fade">
               {scape.logo && (

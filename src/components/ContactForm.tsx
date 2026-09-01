@@ -114,7 +114,7 @@ export function ContactForm({ enabled = false }: { enabled?: boolean }) {
           <span className="t-micro text-mute">Contact</span>
         </div>
       </div>
-      <div className="wrap pt-[clamp(3.5rem,10vh,6.5rem)] pb-[clamp(4rem,12vh,8rem)] grid12">
+      <div className="wrap pt-[clamp(2.5rem,6vh,4.5rem)] pb-[clamp(2rem,5vh,3.5rem)] grid12">
         <div className="col-span-12 lg:col-span-4">
           <h2 id="contact-title" className="t-h2" data-reveal>Start a<br />conversation<span className="text-blue">.</span></h2>
           <p className="t-body mt-8 max-w-[30ch]" data-reveal>We read every message and reply when there is a conversation to have.</p>

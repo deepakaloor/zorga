@@ -26,7 +26,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="mt-[clamp(3rem,12svh,7.5rem)] pb-[clamp(3rem,8vh,5rem)] grid12 items-end">
+        <div className="mt-[clamp(2.5rem,8svh,5rem)] pb-[clamp(2.5rem,6vh,4rem)] grid12 items-end">
           <p className="hero-fade col-span-12 md:col-span-5 t-lead max-w-[30ch]">
             We develop the idea, structure and model behind new industry platforms.
           </p>

@@ -12,14 +12,14 @@ export function Statement() {
           <span className="t-micro text-mute">Zorga</span>
         </div>
       </div>
-      <div className="wrap pt-[clamp(4.5rem,14vh,10rem)] pb-[clamp(6rem,18vh,13rem)]">
+      <div className="wrap pt-[clamp(3rem,8vh,5.5rem)] pb-[clamp(2.5rem,6vh,4.5rem)]">
         <h2 id="statement-title" className="t-display grid" data-reveal="lines">
           <Ml>Before there is</Ml>
           <Ml className="pl-[6vw] md:pl-[9vw]">an event,</Ml>
           <Ml>there is a reason</Ml>
           <Ml className="justify-self-end text-right">to convene.</Ml>
         </h2>
-        <p className="t-lead mt-[clamp(3.5rem,10vh,7rem)]" data-reveal>Zorga works on that reason.</p>
+        <p className="t-lead mt-[clamp(2.5rem,6vh,4.5rem)]" data-reveal>Zorga works on that reason.</p>
       </div>
     </section>
   );

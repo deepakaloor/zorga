@@ -56,16 +56,16 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
           </div>
         </div>
 
-        <div className="wrap pt-[clamp(3.5rem,10vh,7rem)]">
+        <div className="wrap pt-[clamp(2.5rem,6vh,4.5rem)]">
           <h1 className="t-display grid">
             {c.question.map((l, i) => (
               <span key={i} className="hero-line"><span>{l}</span></span>
             ))}
           </h1>
-          <p className="hero-fade t-lead mt-[clamp(2.5rem,7vh,4.5rem)] max-w-[44ch]">{c.text}</p>
+          <p className="hero-fade t-lead mt-[clamp(2rem,5vh,3.5rem)] max-w-[44ch]">{c.text}</p>
         </div>
 
-        <div className="wrap pt-[clamp(4rem,12vh,8rem)] pb-[clamp(5rem,14vh,10rem)] grid12 items-start">
+        <div className="wrap pt-[clamp(2rem,5vh,3.5rem)] pb-[clamp(3rem,8vh,6rem)] grid12 items-start">
           <div className="col-span-8 sm:col-span-6 lg:col-span-4" data-reveal="fade">
             {c.logo &&
               (c.logo.onDark ? (
@@ -86,7 +86,7 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
           </ul>
         </div>
 
-        <div className="wrap border-t border-rule py-[clamp(3.5rem,10vh,6.5rem)] flex flex-wrap items-baseline justify-between gap-6">
+        <div className="wrap border-t border-rule py-[clamp(2.5rem,6vh,4.5rem)] flex flex-wrap items-baseline justify-between gap-6">
           <p className="t-lead text-ink-2" data-reveal>Bring us the question.</p>
           <Link href="/#contact" className="t-label u-line arrow-link inline-flex items-center gap-3 text-ink" data-reveal="fade">
             Start a conversation <span aria-hidden className="arr">→</span>
