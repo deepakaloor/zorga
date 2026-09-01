@@ -11,6 +11,10 @@
   "observability": {
     "enabled": true
   },
+  "routes": [
+    { "pattern": "zorga.co", "custom_domain": true },
+    { "pattern": "www.zorga.co", "custom_domain": true }
+  ],
   "vars": {
     "NEXT_PUBLIC_SITE_URL": "https://zorga.co"
   }

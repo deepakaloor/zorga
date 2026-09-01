@@ -9,7 +9,15 @@ const nextConfig: NextConfig = {
     deviceSizes: [390, 640, 768, 1024, 1280, 1440, 1728, 1920],
   },
   async redirects() {
-    return [{ source: "/legal", destination: "/terms", permanent: true }];
+    return [
+      { source: "/legal", destination: "/terms", permanent: true },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.zorga.co" }],
+        destination: "https://zorga.co/:path*",
+        permanent: true,
+      },
+    ];
   },
   async headers() {
     return [
