@@ -11,7 +11,7 @@ export interface Concept {
   name: string;
   fullName: string;
   /** Approved logo asset. `null` = no approved identity exists; set in text only. */
-  logo: { src: string; width: number; height: number; onDark?: boolean; alt: string; carriesName?: boolean } | null;
+  logo: { src: string; width: number; height: number; alt: string; carriesName?: boolean } | null;
   status: ConceptStatus;
   /** Small marker line, e.g. "INDIA / DEFENCE" */
   marker: string;
@@ -69,7 +69,7 @@ export const concepts: Concept[] = [
     order: 4,
     name: "SourceScape",
     fullName: "Hospitality Sourcing Experience",
-    logo: { src: "/logos/sourcescape.png", width: 774, height: 87, onDark: true, alt: "SourceScape" },
+    logo: { src: "/logos/sourcescape-black.png", width: 2172, height: 267, alt: "SourceScape" },
     status: "PLATFORM CONCEPT DEVELOPED",
     marker: "HOSPITALITY / SOURCING",
     question: ["What if the", "relationship", "was the format?"],

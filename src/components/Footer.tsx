@@ -22,7 +22,7 @@ export function Footer() {
           <nav aria-label="Footer" className="col-span-6 md:col-span-2 md:col-start-11 flex flex-col items-start gap-3">
             <Link href="/privacy" className="t-label u-line">Privacy</Link>
             <Link href="/terms" className="t-label u-line">Terms</Link>
-            <a href="#contact" className="t-label u-line">Contact</a>
+            <a href="/#contact" className="t-label u-line">Contact</a>
           </nav>
         </div>
 

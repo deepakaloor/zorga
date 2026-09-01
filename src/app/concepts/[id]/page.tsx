@@ -42,8 +42,8 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
             <Wordmark height={27} />
           </Link>
           <nav aria-label="Concept page" className="flex items-center gap-8">
-            <Link href="/#concepts" className="t-label u-line text-ink">All concepts</Link>
-            <Link href="/#contact" className="t-label u-line text-ink hidden sm:inline-flex">Contact</Link>
+            <a href="/#concepts" className="t-label u-line text-ink">All concepts</a>
+            <a href="/#contact" className="t-label u-line text-ink hidden sm:inline-flex">Contact</a>
           </nav>
         </div>
       </header>
@@ -67,14 +67,15 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
 
         <div className="wrap pt-[clamp(2rem,5vh,3.5rem)] pb-[clamp(3rem,8vh,6rem)] grid12 items-start">
           <div className="col-span-8 sm:col-span-6 lg:col-span-4" data-reveal="fade">
-            {c.logo &&
-              (c.logo.onDark ? (
-                <div className="bg-ink px-8 py-14 flex items-center">
-                  <Image src={c.logo.src} alt={c.logo.alt} width={c.logo.width} height={c.logo.height} className="w-full h-auto" />
-                </div>
-              ) : (
-                <Image src={c.logo.src} alt={c.logo.alt} width={c.logo.width} height={c.logo.height} className="w-full max-w-[18rem] h-auto" />
-              ))}
+            {c.logo && (
+              <Image
+                src={c.logo.src}
+                alt={c.logo.alt}
+                width={c.logo.width}
+                height={c.logo.height}
+                className={`w-full h-auto ${c.logo.width / c.logo.height > 4 ? "max-w-[26rem]" : "max-w-[18rem]"}`}
+              />
+            )}
             {!c.logo?.carriesName && <p className="t-micro text-ink-2 mt-6">{c.fullName}</p>}
           </div>
           <ul className="col-span-12 lg:col-span-5 lg:col-start-7 mt-12 lg:mt-0">
@@ -88,9 +89,9 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
 
         <div className="wrap border-t border-rule py-[clamp(2.5rem,6vh,4.5rem)] flex flex-wrap items-baseline justify-between gap-6">
           <p className="t-lead text-ink-2" data-reveal>Bring us the question.</p>
-          <Link href="/#contact" className="t-label u-line arrow-link inline-flex items-center gap-3 text-ink" data-reveal="fade">
+          <a href="/#contact" className="t-label u-line arrow-link inline-flex items-center gap-3 text-ink" data-reveal="fade">
             Start a conversation <span aria-hidden className="arr">→</span>
-          </Link>
+          </a>
         </div>
       </main>
 

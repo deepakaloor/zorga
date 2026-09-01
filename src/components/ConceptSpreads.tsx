@@ -123,16 +123,14 @@ export function ConceptSpreads() {
         </div>
       </article>
 
-      {/* SourceScape — identity on its dark plate, question right. */}
+      {/* SourceScape — identity left, question right. */}
       <article className="wrap pb-[clamp(2.5rem,6vh,4.5rem)]" aria-label={scape.fullName}>
         <Meta c={scape} />
         <div className="grid12 pt-[clamp(2rem,5vh,3.5rem)] items-center">
-          <div className="col-span-12 sm:col-span-8 lg:col-span-4">
-            <div className="bg-ink px-8 py-14 flex items-center" data-reveal="fade">
-              {scape.logo && (
-                <Image src={scape.logo.src} alt={scape.logo.alt} width={scape.logo.width} height={scape.logo.height} className="w-full h-auto" />
-              )}
-            </div>
+          <div className="col-span-12 sm:col-span-10 lg:col-span-4" data-reveal="fade">
+            {scape.logo && (
+              <Image src={scape.logo.src} alt={scape.logo.alt} width={scape.logo.width} height={scape.logo.height} className="w-full max-w-[24rem] h-auto" />
+            )}
           </div>
           <div className="col-span-12 lg:col-span-6 lg:col-start-6 mt-12 lg:mt-0">
             <Question c={scape} />

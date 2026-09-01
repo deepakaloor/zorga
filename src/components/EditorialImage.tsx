@@ -24,7 +24,7 @@ export function EditorialImage() {
               width={1684}
               height={1047}
               sizes="(max-width: 1023px) 92vw, 60vw"
-              quality={85}
+              quality={82}
               className="w-full h-auto"
             />
           </div>
