@@ -55,6 +55,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${grotesk.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        {/* Scroll reveals need JS; without it, content must simply be visible. */}
+        <noscript>
+          <style>{`[data-reveal]{opacity:1 !important;transform:none !important}.ml>span{transform:none !important}`}</style>
+        </noscript>
         <MotionPreferences>
           {children}
           <Reveal />
