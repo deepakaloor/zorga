@@ -18,15 +18,16 @@ export function Hero() {
           <p className="t-micro text-mute hero-fade hidden sm:block">{site.region}</p>
         </div>
 
-        <h1 id="hero-title" className="t-hero mt-[clamp(2rem,6vh,4rem)] grid">
+        {/* Mobile: one clean left-aligned block. Desktop: the approved staggered composition. */}
+        <h1 id="hero-title" className="t-hero mt-[clamp(1.75rem,5vh,4rem)] grid">
           <span className="hero-line justify-self-start"><span>We design</span></span>
           <span className="hero-line justify-self-start md:pl-[min(7vw,6rem)]"><span>what industries</span></span>
-          <span className="hero-line justify-self-end text-right">
+          <span className="hero-line justify-self-start md:justify-self-end md:text-right">
             <span>gather around<span className="text-blue">.</span></span>
           </span>
         </h1>
 
-        <div className="mt-[clamp(2.5rem,8svh,5rem)] pb-[clamp(2.5rem,6vh,4rem)] grid12 items-end">
+        <div className="mt-[clamp(2rem,6svh,5rem)] pb-[clamp(2.5rem,6vh,4rem)] grid12 items-end">
           <p className="hero-fade col-span-12 md:col-span-5 t-lead max-w-[30ch]">
             We develop the idea, structure and model behind new industry platforms.
           </p>

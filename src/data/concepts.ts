@@ -23,8 +23,8 @@ export interface Concept {
   words: string[];
 }
 
-/** Concepts with a page of their own. IDGS stays homepage-only until its identity exists. */
-export const conceptPageIds = ["revx", "ai-waqf", "sourcescape"] as const;
+/** Concepts with a standalone page. IDGS has one too; its page stays text-only until an identity exists. */
+export const conceptPageIds = ["idgs", "revx", "ai-waqf", "sourcescape"] as const;
 export const conceptHasPage = (id: string) => (conceptPageIds as readonly string[]).includes(id);
 
 export const concepts: Concept[] = [
@@ -47,7 +47,7 @@ export const concepts: Concept[] = [
     fullName: "Revenue Architecture Forum",
     logo: { src: "/logos/revx.svg", width: 388, height: 169, alt: "RevX, Revenue Architecture Forum", carriesName: true },
     status: "PLATFORM CONCEPT DEVELOPED",
-    marker: "GCC / REVENUE",
+    marker: "REVENUE / GCC",
     question: ["What if revenue", "worked as", "one system?"],
     text: "RevX examines revenue as one system across marketing, sales, operations and customer growth.",
     words: ["MARKETING", "SALES", "REVOPS", "CUSTOMER"],

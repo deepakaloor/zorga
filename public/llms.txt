@@ -15,8 +15,8 @@ Zorga develops the idea, stakeholder structure, commercial model and route to ma
 
 ## Selected concepts
 
-- IDGS (India Defence Growth Summit) - India / defence - status: in development
-- RevX (Revenue Architecture Forum) - GCC / revenue - status: platform concept developed - https://zorga.co/concepts/revx
+- IDGS (India Defence Growth Summit) - India / defence - status: in development - https://zorga.co/concepts/idgs
+- RevX (Revenue Architecture Forum) - revenue / GCC - status: platform concept developed - https://zorga.co/concepts/revx
 - AI-WAQF (AI-WAQF Summit) - Islamic finance / technology - status: platform concept developed - https://zorga.co/concepts/ai-waqf
 - SourceScape (Hospitality Sourcing Experience) - hospitality / sourcing - status: platform concept developed - https://zorga.co/concepts/sourcescape
 

@@ -69,13 +69,14 @@ export function ConceptSpreads() {
         </p>
       </div>
 
-      {/* IDGS — no separate page yet; the one line it needs lives here. */}
+      {/* IDGS: typographic identity until one exists; concise preview plus its page. */}
       <article className="wrap pb-[clamp(3rem,8vh,6rem)]" aria-label={idgs.fullName}>
         <Meta c={idgs} />
         <div className="grid12 pt-[clamp(2rem,5vh,3.5rem)]">
           <div className="col-span-12 lg:col-span-6">
             <Question c={idgs} />
             <p className="t-body mt-8 max-w-[44ch]" data-reveal>{idgs.text}</p>
+            <ConceptLink c={idgs} />
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8 mt-12 lg:mt-0">
             <p className="t-hero leading-none" data-reveal="lines"><Ml>{idgs.name}</Ml></p>
