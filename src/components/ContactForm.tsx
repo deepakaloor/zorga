@@ -108,13 +108,14 @@ export function ContactForm({ enabled = false }: { enabled?: boolean }) {
   const label = "t-micro text-ink-2 block mb-1";
 
   return (
-    <section id="contact" aria-labelledby="contact-title">
+    // The one tonal band on the page: paper ground sets the invitation apart.
+    <section id="contact" aria-labelledby="contact-title" className="bg-paper border-t border-rule">
       <div className="wrap">
-        <div className="sec-bar">
+        <div className="sec-bar !border-t-0">
           <span className="t-micro text-mute">Contact</span>
         </div>
       </div>
-      <div className="wrap pt-[clamp(2.5rem,6vh,4.5rem)] pb-[clamp(2rem,5vh,3.5rem)] grid12">
+      <div className="wrap pt-[clamp(2.5rem,6vh,4.5rem)] pb-[clamp(2.5rem,6vh,4rem)] grid12">
         <div className="col-span-12 lg:col-span-4">
           <h2 id="contact-title" className="t-h2" data-reveal>Start a<br />conversation<span className="text-blue">.</span></h2>
           <p className="t-body mt-8 max-w-[30ch]" data-reveal>We read every message and reply when there is a conversation to have.</p>
