@@ -1,26 +1,257 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------ */
+/*  ZORGA — V3 design tokens. White, precise, editorial.               */
+/* ------------------------------------------------------------------ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #ffffff;
+  --paper: #f7f6f4;
+  --ink: #131314;
+  --ink-2: #414143;   /* wordmark grey, from the logo kit */
+  --mute: #6e6e73; /* AA at label sizes */
+  --faint: #e2e1dc;   /* ghost numerals, faint marks */
+  --rule: #e6e5e1;
+  --rule-strong: #cfcec9;
+  --blue: #469fdd;    /* official Zorga blue — surgical accent only */
+
+  --margin: clamp(1.25rem, 5vw, 6.5rem);
+  --container: 1840px;
+  --gutter: clamp(0.75rem, 1.5vw, 1.5rem);
+
+  --fs-hero: clamp(1.9rem, 9.65vw, 5rem); /* mobile-first; desktop overrides below */
+  --hero-weight: 750;
+  --hero-leading: 0.9;
+  --hero-tracking: -0.04em;
+  --fs-display: clamp(2.3rem, 7.4vw, 8.5rem);
+  --fs-h1: clamp(2rem, 5.4vw, 6rem);
+  --fs-h2: clamp(1.65rem, 3.6vw, 4rem);
+  --fs-h3: clamp(1.25rem, 2vw, 2.1rem);
+  --fs-lead: clamp(1.08rem, 1.4vw, 1.4rem);
+  --fs-body: clamp(0.98rem, 1.05vw, 1.08rem);
+  --fs-micro: 0.6875rem;
+
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 300ms;
+  --t-base: 600ms;
+  --t-slow: 900ms;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-white: var(--white);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-mute: var(--mute);
+  --color-faint: var(--faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-blue: var(--blue);
+  --font-sans: var(--font-grotesk), "Helvetica Neue", Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (min-width: 768px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --fs-hero: clamp(2.25rem, 8.9vw, 10.25rem);
+    --hero-weight: 650;
+    --hero-leading: 0.92;
+    --hero-tracking: -0.034em;
   }
 }
 
+html { -webkit-text-size-adjust: 100%; }
+html:not(.no-motion) { scroll-behavior: smooth; }
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  font-feature-settings: "kern", "liga";
+  overflow-x: clip;
 }
+
+::selection { background: var(--ink); color: var(--white); }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
+/* ------------------------------------------------------------------ */
+/*  Layout                                                             */
+/* ------------------------------------------------------------------ */
+.wrap {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--margin);
+}
+.grid12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+}
+
+/* Section index bar: hairline + folio row. The page reads like a document. */
+.sec-bar {
+  border-top: 1px solid var(--rule);
+  padding-block: 0.9rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+/* ------------------------------------------------------------------ */
+/*  Typography                                                         */
+/* ------------------------------------------------------------------ */
+.t-hero {
+  font-size: var(--fs-hero);
+  line-height: var(--hero-leading);
+  letter-spacing: var(--hero-tracking);
+  font-weight: var(--hero-weight);
+  text-transform: uppercase;
+}
+.t-display {
+  font-size: var(--fs-display);
+  line-height: 0.95;
+  letter-spacing: -0.028em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.t-h1 {
+  font-size: var(--fs-h1);
+  line-height: 0.97;
+  letter-spacing: -0.026em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.t-h2 {
+  font-size: var(--fs-h2);
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.t-h3 {
+  font-size: var(--fs-h3);
+  line-height: 1.12;
+  letter-spacing: -0.014em;
+  font-weight: 500;
+  text-wrap: balance;
+}
+.t-lead {
+  font-size: var(--fs-lead);
+  line-height: 1.4;
+  letter-spacing: -0.008em;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+.t-body {
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+.t-micro {
+  font-size: var(--fs-micro);
+  line-height: 1.3;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.t-label {
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.t-num { font-variant-numeric: tabular-nums; }
+
+/* editorial annotation: short blue rule before a label */
+.annot { display: inline-flex; align-items: center; gap: 0.75rem; }
+.annot::before { content: ""; display: block; width: 1.5rem; height: 1px; background: var(--blue); flex: none; }
+
+/* ------------------------------------------------------------------ */
+/*  Reveal (IntersectionObserver toggles .is-in; CSS owns motion)      */
+/* ------------------------------------------------------------------ */
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  transition: opacity var(--t-slow) var(--ease-out), transform var(--t-slow) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal].is-in { opacity: 1; transform: none; }
+[data-reveal="fade"] { transform: none; }
+.no-motion [data-reveal] { opacity: 1; transform: none; transition: none; }
+
+/* Masked line rise for display headings: each .ml line lifts into place
+   as the heading scrolls into view. The heading itself never fades. */
+[data-reveal="lines"] { opacity: 1; transform: none; transition: none; }
+.ml { display: block; overflow: clip; padding-bottom: 0.12em; margin-bottom: -0.12em; }
+.ml > span { display: block; transform: translate3d(0, 112%, 0); transition: transform 850ms var(--ease-out); }
+[data-reveal="lines"].is-in .ml > span { transform: none; }
+.ml:nth-child(2) > span { transition-delay: 90ms; }
+.ml:nth-child(3) > span { transition-delay: 180ms; }
+.ml:nth-child(4) > span { transition-delay: 270ms; }
+.no-motion .ml > span { transform: none; transition: none; }
+
+/* ------------------------------------------------------------------ */
+/*  Hero intro (CSS only, < 1s, then completely still)                 */
+/* ------------------------------------------------------------------ */
+@keyframes rule-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes rise-in { from { transform: translate3d(0, 110%, 0); } to { transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.hero-rule { transform-origin: left center; animation: rule-in 700ms var(--ease-out) 80ms both; }
+.hero-line { display: block; overflow: hidden; }
+.hero-line > span { display: block; animation: rise-in 800ms var(--ease-out) both; }
+.hero-line:nth-child(1) > span { animation-delay: 100ms; }
+.hero-line:nth-child(2) > span { animation-delay: 200ms; }
+.hero-line:nth-child(3) > span { animation-delay: 300ms; }
+.hero-fade { animation: fade-in 700ms var(--ease-out) 550ms both; }
+.no-motion .hero-rule, .no-motion .hero-line > span, .no-motion .hero-fade { animation: none; }
+
+/* ------------------------------------------------------------------ */
+/*  Link underline                                                     */
+/* ------------------------------------------------------------------ */
+.u-line { position: relative; text-decoration: none; }
+.u-line::after {
+  content: ""; position: absolute; left: 0; bottom: -0.2em; height: 1px; width: 100%;
+  background: currentColor; transform: scaleX(0); transform-origin: right center;
+  transition: transform var(--t-fast) var(--ease-out);
+}
+.u-line:hover::after, .u-line:focus-visible::after { transform: scaleX(1); transform-origin: left center; }
+.u-line[aria-current="true"]::after { transform: scaleX(1); background: var(--blue); }
+
+/* Arrow nudge on primary text links */
+.arrow-link .arr, .arrow-link .arr-d { display: inline-block; transition: transform var(--t-fast) var(--ease-out); }
+.arrow-link:hover .arr, .arrow-link:focus-visible .arr { transform: translateX(0.3em); }
+.arrow-link:hover .arr-d, .arrow-link:focus-visible .arr-d { transform: translateY(0.2em); }
+.no-motion .arrow-link .arr, .no-motion .arrow-link .arr-d { transition: none; }
+
+/* ------------------------------------------------------------------ */
+/*  Editorial crawl band (CSS only, very slow)                         */
+/* ------------------------------------------------------------------ */
+@keyframes crawl { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+.crawl { overflow: hidden; }
+.crawl-track { display: flex; width: max-content; animation: crawl 150s linear infinite; will-change: transform; }
+.no-motion .crawl { overflow-x: auto; }
+.no-motion .crawl-track { animation: none; width: auto; }
+.no-motion .crawl-half:last-child { display: none; }
+
+/* ------------------------------------------------------------------ */
+/*  The Question — sticky statement, right column swaps by scroll      */
+/* ------------------------------------------------------------------ */
+.q-item {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+  pointer-events: none;
+}
+.q-item.is-active { opacity: 1; transform: none; pointer-events: auto; }
+.no-motion .q-item { transition: none; }
+.no-motion .q-desktop { display: none !important; }
+.no-motion .q-static { display: block !important; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

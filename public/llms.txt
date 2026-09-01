@@ -1,0 +1,28 @@
+# Zorga
+
+Zorga is a strategic platform architecture company based in the United Arab Emirates. Website: https://zorga.co
+
+## What Zorga does
+
+Zorga develops the idea, stakeholder structure, commercial model and route to market behind industry platforms, before execution begins. An event may be one output; the architecture behind the platform is the core work.
+
+## How Zorga works
+
+- Originate: create a platform from an opportunity
+- Co-create: build around a shared objective with an institution, company or industry body
+- Architect: rethink an existing platform
+- Partner: bring a Zorga concept to market with specialist partners
+
+## Selected concepts
+
+- IDGS (India Defence Growth Summit) - India / defence - status: in development
+- RevX (Revenue Architecture Forum) - GCC / revenue - status: platform concept developed - https://zorga.co/concepts/revx
+- AI-WAQF (AI-WAQF Summit) - Islamic finance / technology - status: platform concept developed - https://zorga.co/concepts/ai-waqf
+- SourceScape (Hospitality Sourcing Experience) - hospitality / sourcing - status: platform concept developed - https://zorga.co/concepts/sourcescape
+
+No concept listed here is presented as an executed event unless its status says so.
+
+## Contact
+
+swaroop@zorga.co
+https://zorga.co/#contact
