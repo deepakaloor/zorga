@@ -7,10 +7,10 @@
 export function Hero() {
   return (
     <section id="top" aria-labelledby="hero-title" className="pt-16 md:pt-20">
-      <div className="wrap flex min-h-[72svh] md:min-h-[78svh] flex-col justify-between pt-[clamp(1.5rem,4svh,3.5rem)] pb-[clamp(2rem,5svh,3.5rem)]">
+      <div className="wrap flex min-h-[54svh] md:min-h-[78svh] flex-col justify-between pt-[clamp(1.5rem,4svh,3.5rem)] pb-[clamp(2rem,5svh,3.5rem)]">
         <h1 id="hero-title" className="t-hero">
-          <span className="hero-line hero-l1"><span>We design</span></span>
-          <span className="hero-line hero-l2"><span>what industries</span></span>
+          <span className="hero-line hero-l1"><span>We design what</span></span>
+          <span className="hero-line hero-l2"><span>industries</span></span>
           <span className="hero-line hero-l3"><span>gather around<span className="text-blue">.</span></span></span>
         </h1>
 

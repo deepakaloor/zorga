@@ -102,14 +102,15 @@ body {
   font-weight: 700;
   text-transform: uppercase;
 }
-.hero-l1 { font-size: calc(var(--hero-w) / 5.694); }
-.hero-l2 { font-size: calc(var(--hero-w) / 9.498); }
-.hero-l3 { font-size: calc(var(--hero-w) / 8.881); }
-/* Rendered tracking widens slightly at large sizes; recalibrated ratios. */
+.hero-l1 { font-size: calc(var(--hero-w) / 8.898); }
+.hero-l2 { font-size: calc(var(--hero-w) / 6.304); }
+.hero-l3 { font-size: calc(var(--hero-w) / 8.88); }
+/* Desktop runs lighter (650); ratios recalibrated for that weight. */
 @media (min-width: 768px) {
-  .hero-l1 { font-size: calc(var(--hero-w) / 5.747); }
-  .hero-l2 { font-size: calc(var(--hero-w) / 9.655); }
-  .hero-l3 { font-size: calc(var(--hero-w) / 9.016); }
+  .t-hero { font-weight: 650; }
+  .hero-l1 { font-size: calc(var(--hero-w) / 8.953); }
+  .hero-l2 { font-size: calc(var(--hero-w) / 6.279); }
+  .hero-l3 { font-size: calc(var(--hero-w) / 8.937); }
 }
 .t-display {
   font-size: var(--fs-display);
