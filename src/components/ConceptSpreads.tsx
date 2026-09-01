@@ -69,7 +69,7 @@ export function ConceptSpreads() {
         </p>
       </div>
 
-      {/* IDGS: typographic identity until one exists; concise preview plus its page. */}
+      {/* IDGS: official logo, concise preview plus its page. */}
       <article className="wrap pb-[clamp(3rem,8vh,6rem)]" aria-label={idgs.fullName}>
         <Meta c={idgs} />
         <div className="grid12 pt-[clamp(2rem,5vh,3.5rem)]">
@@ -79,8 +79,12 @@ export function ConceptSpreads() {
             <ConceptLink c={idgs} />
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8 mt-12 lg:mt-0">
-            <p className="t-hero leading-none" data-reveal="lines"><Ml>{idgs.name}</Ml></p>
-            <p className="t-micro text-ink-2 mt-4" data-reveal="fade">{idgs.fullName}</p>
+            <div data-reveal="fade">
+              {idgs.logo && (
+                <Image src={idgs.logo.src} alt={idgs.logo.alt} width={idgs.logo.width} height={idgs.logo.height} className="w-full max-w-[13rem] sm:max-w-[16rem] h-auto" />
+              )}
+            </div>
+            <p className="t-micro text-ink-2 mt-5" data-reveal="fade">{idgs.fullName}</p>
             <ul className="mt-10">
               {idgs.words.map((w, i) => (
                 <li key={w} className="border-t border-rule py-3" data-reveal="fade" style={{ ["--reveal-delay" as string]: `${i * 80}ms` }}>

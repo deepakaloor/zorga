@@ -19,12 +19,11 @@ export function EditorialImage() {
         <div className="grid12 mt-[clamp(2rem,5vh,3.5rem)]">
           <div className="col-span-12 sm:col-span-11 sm:col-start-2 lg:col-span-8 lg:col-start-5" data-reveal="fade">
             <Image
-              src="/assets/zorga-forum.png"
+              src="/assets/zorga-forum.webp"
               alt="White architectural model of an open forum pavilion. A thin roof on slender columns over an open central space, empty and waiting to be occupied."
-              width={1684}
-              height={1047}
+              width={1400}
+              height={870}
               sizes="(max-width: 1023px) 92vw, 60vw"
-              quality={82}
               className="w-full h-auto"
             />
           </div>

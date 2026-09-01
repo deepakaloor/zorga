@@ -10,7 +10,7 @@ export interface Concept {
   order: number;
   name: string;
   fullName: string;
-  /** Approved logo asset. `null` = no approved identity exists; set in text only. */
+  /** Approved logo asset. */
   logo: { src: string; width: number; height: number; alt: string; carriesName?: boolean } | null;
   status: ConceptStatus;
   /** Small marker line, e.g. "INDIA / DEFENCE" */
@@ -33,7 +33,7 @@ export const concepts: Concept[] = [
     order: 1,
     name: "IDGS",
     fullName: "India Defence Growth Summit",
-    logo: null,
+    logo: { src: "/logos/idgs.webp", width: 794, height: 250, alt: "IDGS" },
     status: "IN DEVELOPMENT",
     marker: "INDIA / DEFENCE",
     question: ["What does", "defence growth", "actually require?"],
@@ -57,7 +57,7 @@ export const concepts: Concept[] = [
     order: 3,
     name: "AI-WAQF",
     fullName: "AI-WAQF Summit",
-    logo: { src: "/logos/ai-waqf.png", width: 762, height: 195, alt: "AI-WAQF Summit", carriesName: true },
+    logo: { src: "/logos/ai-waqf.webp", width: 762, height: 195, alt: "AI-WAQF Summit", carriesName: true },
     status: "PLATFORM CONCEPT DEVELOPED",
     marker: "ISLAMIC FINANCE / TECHNOLOGY",
     question: ["How does a", "centuries-old", "institution evolve?"],
@@ -69,7 +69,7 @@ export const concepts: Concept[] = [
     order: 4,
     name: "SourceScape",
     fullName: "Hospitality Sourcing Experience",
-    logo: { src: "/logos/sourcescape-black.png", width: 2172, height: 267, alt: "SourceScape" },
+    logo: { src: "/logos/sourcescape-black.webp", width: 900, height: 111, alt: "SourceScape" },
     status: "PLATFORM CONCEPT DEVELOPED",
     marker: "HOSPITALITY / SOURCING",
     question: ["What if the", "relationship", "was the format?"],

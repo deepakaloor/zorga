@@ -4,9 +4,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    formats: ["image/avif", "image/webp"],
-    qualities: [75, 82],
-    deviceSizes: [390, 640, 768, 1024, 1280, 1440, 1728, 1920],
+    // All raster assets are pre-sized WebP served as static files. The
+    // Cloudflare deployment has no image resizer, so the /_next/image
+    // pass-through hop is pure overhead; serve the files directly.
+    unoptimized: true,
   },
   async redirects() {
     return [
