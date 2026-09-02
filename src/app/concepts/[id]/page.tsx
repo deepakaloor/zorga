@@ -131,7 +131,7 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
             <span aria-hidden>←</span> Selected Concepts
           </a>
           <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-rule pb-4 pt-5">
-            <p className="t-micro text-ink-2">{c.marker}</p>
+            <p className="t-micro text-ink-2 annot">{c.marker}</p>
             <p className="t-micro text-mute">{c.status}</p>
           </div>
         </div>
