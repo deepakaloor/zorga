@@ -128,13 +128,14 @@ export function ContactForm({ enabled = false }: { enabled?: boolean }) {
 
         <div className="col-span-12 lg:col-span-7 lg:col-start-6 mt-10 lg:mt-0">
           {status === "sent" ? (
-            <div role="status" aria-live="polite" className="border-t border-ink pt-8" data-reveal="fade">
-              <p className="t-h3">Thank you. Your message has been sent.</p>
+            // Mounted after submit, so it must not depend on the scroll observer.
+            <div role="status" aria-live="polite" className="border-t border-ink pt-8 appear">
+              <p className="t-h3"><span aria-hidden className="inline-block h-[5px] w-6 bg-blue align-middle mr-4 mb-1" />Thank you. Your message has been sent.</p>
               <p className="t-body mt-3 max-w-[40ch]">We read every message and reply when there is a conversation to have.</p>
               <button type="button" className="t-label u-line mt-8" onClick={() => setStatus("idle")}>Send another message</button>
             </div>
           ) : (
-            <form onSubmit={onSubmit} noValidate className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-9" data-reveal="fade">
+            <form onSubmit={onSubmit} noValidate className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-9 appear">
               <div className="hidden" aria-hidden="true">
                 <label htmlFor={`${id}-website`}>Website</label>
                 <input id={`${id}-website`} name="website" type="text" tabIndex={-1} autoComplete="off" />

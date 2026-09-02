@@ -231,7 +231,10 @@ body {
 .hero-fade { animation: fade-in 700ms var(--ease-out) 550ms both; }
 /* The blue period lands just after the last line settles, then holds still. */
 .hero-dot { animation: fade-in 250ms var(--ease-out) 1200ms both; }
-.no-motion .hero-line > span, .no-motion .hero-fade, .no-motion .hero-dot { animation: none; }
+/* Entrance for elements mounted at runtime (e.g. the contact confirmation),
+   which the scroll observer never sees. */
+.appear { animation: fade-in 450ms var(--ease-out) both; }
+.no-motion .hero-line > span, .no-motion .hero-fade, .no-motion .hero-dot, .no-motion .appear { animation: none; }
 
 /* ------------------------------------------------------------------ */
 /*  Link underline                                                     */
