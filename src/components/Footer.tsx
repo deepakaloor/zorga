@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <footer className="relative border-t border-rule overflow-hidden">
       <div className="wrap pt-14 md:pt-20 pb-6">
-        <div className="grid12 gap-y-10">
+        <div className="grid12 gap-y-10" data-reveal="fade">
           <div className="col-span-12 md:col-span-5">
             <p className="t-label">{site.legalLine}</p>
             <p className="t-micro text-ink-2 mt-3">{site.tagline}</p>

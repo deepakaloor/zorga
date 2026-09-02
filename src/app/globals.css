@@ -271,6 +271,10 @@ body {
   pointer-events: none;
 }
 .q-item.is-active { opacity: 1; transform: none; pointer-events: auto; }
+/* The sticky screen centres ~21rem of content, so the track's final screen
+   ends with an empty half below it. Reclaim that so the closing line follows
+   the question without a void. */
+.q-desktop { margin-bottom: calc(10.5rem - 50vh); }
 .no-motion .q-item { transition: none; }
 .no-motion .q-desktop { display: none !important; }
 .no-motion .q-static { display: block !important; }
