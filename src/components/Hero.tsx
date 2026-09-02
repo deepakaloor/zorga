@@ -9,7 +9,7 @@ import { HeroWord } from "./HeroWord";
 export function Hero() {
   return (
     <section id="top" aria-labelledby="hero-title" className="pt-16 md:pt-20">
-      <div className="wrap pt-[clamp(2.25rem,13.5svh,9.75rem)] md:pt-[clamp(1.5rem,4svh,3.5rem)] pb-[clamp(2.25rem,13.5svh,9.75rem)] md:pb-[clamp(2rem,5svh,3.5rem)]">
+      <div className="wrap pt-[clamp(2.25rem,13.5svh,9.75rem)] md:pt-[clamp(1.5rem,4svh,3.5rem)] pb-[clamp(1.5rem,4svh,3rem)] md:pb-[clamp(2rem,5svh,3.5rem)]">
         <h1 id="hero-title" className="t-hero">
           <span className="hero-line hero-l1"><span>We <span className="text-blue">design</span> what</span></span>
           <span className="hero-line hero-l2"><span><HeroWord /></span></span>
@@ -22,9 +22,13 @@ export function Hero() {
           </p>
         </div>
 
-        <p className="hero-fade flex justify-center mt-[clamp(1.75rem,5svh,3rem)] md:mt-[clamp(1.25rem,3svh,2.25rem)]">
+        <p className="hero-fade flex justify-center mt-[clamp(2rem,13.5svh,9.75rem)] md:mt-[clamp(1.75rem,5svh,3.25rem)]">
           <a href="#statement" aria-label="Continue to the next section" className="scroll-cue p-3 -m-3 text-ink">
-            <span aria-hidden>↓</span>
+            <span aria-hidden className="block">
+              <svg width="26" height="14" viewBox="0 0 26 14" fill="none">
+                <path d="M2 2l11 10L24 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
           </a>
         </p>
       </div>
