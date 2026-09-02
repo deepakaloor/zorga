@@ -16,7 +16,7 @@ export function Hero() {
           <span className="hero-line hero-l3"><span>gather around<span className="text-blue hero-dot">.</span></span></span>
         </h1>
 
-        <div className="grid12 pt-[clamp(2.5rem,8svh,5.5rem)] md:pt-[clamp(1.5rem,4svh,3.5rem)]">
+        <div className="grid12 pt-[clamp(2.5rem,13.5svh,9.75rem)] md:pt-[clamp(1.5rem,4svh,3.5rem)]">
           <p className="hero-fade col-span-12 md:col-span-5 t-lead max-w-[30ch]">
             We develop the idea, structure and model behind new industry platforms.
           </p>
