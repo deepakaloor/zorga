@@ -239,6 +239,12 @@ body {
 .hw-in { transition: none; transform: translate3d(0, 0.16em, 0); opacity: 0; }
 .hw-alt { font-size: 0.828em; }
 .no-motion .hw { transition: none; transform: none; opacity: 1; }
+
+/* Centred scroll cue: one slow, quiet dip. Static under reduced motion. */
+@keyframes cue-dip { 0%, 100% { transform: none; opacity: 0.85; } 50% { transform: translate3d(0, 0.4em, 0); opacity: 0.3; } }
+.scroll-cue { font-size: 1.375rem; line-height: 1; }
+.scroll-cue > span { display: inline-block; animation: cue-dip 2600ms var(--ease-in-out) infinite; }
+.no-motion .scroll-cue > span { animation: none; }
 /* Entrance for elements mounted at runtime (e.g. the contact confirmation),
    which the scroll observer never sees. */
 .appear { animation: fade-in 450ms var(--ease-out) both; }
