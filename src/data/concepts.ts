@@ -57,7 +57,7 @@ export const concepts: Concept[] = [
     order: 3,
     name: "AI-WAQF",
     fullName: "AI-WAQF Summit",
-    logo: { src: "/logos/ai-waqf.webp", width: 762, height: 195, alt: "AI-WAQF Summit", carriesName: true },
+    logo: { src: "/logos/ai-waqf.webp", width: 768, height: 192, alt: "AI-WAQF Summit", carriesName: true },
     status: "PLATFORM CONCEPT DEVELOPED",
     marker: "ISLAMIC FINANCE / TECHNOLOGY",
     question: ["How does a", "centuries-old", "institution evolve?"],
