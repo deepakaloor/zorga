@@ -231,6 +231,14 @@ body {
 .hero-fade { animation: fade-in 700ms var(--ease-out) 550ms both; }
 /* The blue period lands just after the last line settles, then holds still. */
 .hero-dot { animation: fade-in 250ms var(--ease-out) 1200ms both; }
+
+/* The rotating hero word. Same baseline, fixed line box; "institutions" is
+   scaled down (em) so the longest word still spans the same measure. */
+.hw { display: inline-block; transition: transform 260ms var(--ease-out), opacity 260ms var(--ease-out); }
+.hw-out { transform: translate3d(0, -0.14em, 0); opacity: 0; }
+.hw-in { transition: none; transform: translate3d(0, 0.16em, 0); opacity: 0; }
+.hw-alt { font-size: 0.828em; }
+.no-motion .hw { transition: none; transform: none; opacity: 1; }
 /* Entrance for elements mounted at runtime (e.g. the contact confirmation),
    which the scroll observer never sees. */
 .appear { animation: fade-in 450ms var(--ease-out) both; }
