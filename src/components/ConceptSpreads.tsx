@@ -55,13 +55,13 @@ export function ConceptSpreads() {
     <section id="concepts" aria-labelledby="concepts-title">
       <div className="wrap">
         <div className="sec-bar">
-          <span className="t-micro text-mute">Selected platform concepts</span>
+          <span className="t-micro text-mute">Featured platform concepts</span>
         </div>
       </div>
 
       <div className="wrap pt-[clamp(2rem,5vh,3.5rem)] pb-[clamp(2.5rem,6vh,4.5rem)] grid12 items-end">
         <h2 id="concepts-title" className="col-span-12 lg:col-span-8 t-display" data-reveal="lines">
-          <Ml>Selected</Ml>
+          <Ml>Featured</Ml>
           <Ml>platform concepts</Ml>
         </h2>
         <p className="col-span-12 lg:col-span-3 lg:col-start-10 t-body max-w-[26ch] mt-8 lg:mt-0 lg:pb-3" data-reveal>

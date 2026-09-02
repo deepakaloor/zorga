@@ -128,7 +128,7 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
         <div className="wrap pt-6 md:pt-8">
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- next/link drops /#hash navigations from other routes */}
           <a href="/#concepts" className="t-micro text-ink-2 u-line inline-flex items-center gap-2">
-            <span aria-hidden>←</span> Selected Concepts
+            <span aria-hidden>←</span> Featured Concepts
           </a>
           <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-rule pb-4 pt-5">
             <p className="t-micro text-ink-2 annot">{c.marker}</p>
