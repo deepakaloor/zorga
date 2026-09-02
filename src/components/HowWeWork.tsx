@@ -3,9 +3,10 @@ import { Ml } from "./Ml";
 
 export function HowWeWork() {
   return (
-    <section id="work" aria-labelledby="how-title">
+    // The second tonal band: like Contact, the engagement sections sit on paper.
+    <section id="work" aria-labelledby="how-title" className="bg-paper border-y border-rule">
       <div className="wrap">
-        <div className="sec-bar">
+        <div className="sec-bar !border-t-0">
           <span className="t-micro text-mute">Work with us</span>
         </div>
       </div>
