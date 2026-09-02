@@ -9,7 +9,7 @@ import { HeroWord } from "./HeroWord";
 export function Hero() {
   return (
     <section id="top" aria-labelledby="hero-title" className="pt-16 md:pt-20">
-      <div className="wrap pt-[clamp(1.5rem,4svh,3.5rem)] pb-[clamp(3rem,10svh,6.5rem)] md:pb-[clamp(2rem,5svh,3.5rem)]">
+      <div className="wrap pt-[clamp(1.5rem,4svh,3.5rem)] pb-[clamp(3rem,23svh,16rem)] md:pb-[clamp(2rem,5svh,3.5rem)]">
         <h1 id="hero-title" className="t-hero">
           <span className="hero-line hero-l1"><span>We design what</span></span>
           <span className="hero-line hero-l2"><span><HeroWord /></span></span>
