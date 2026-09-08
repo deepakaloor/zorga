@@ -10,7 +10,10 @@ export type TrackEvent =
   | "contact_start"
   | "contact_submit"
   | "contact_success"
-  | "contact_error";
+  | "contact_error"
+  | "idgs_video_open"
+  | "idgs_video_play"
+  | "idgs_video_complete";
 
 export function track(event: TrackEvent, detail: Record<string, unknown> = {}) {
   if (typeof window === "undefined") return;

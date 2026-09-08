@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { concepts, conceptPageIds, conceptHasPage } from "@/data/concepts";
 import { conceptPages, type ConceptSection } from "@/data/concept-pages";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { IdgsFilm } from "@/components/IdgsFilm";
 
 /**
  * Standalone concept pages. The full concept lives in server-rendered HTML:
@@ -159,6 +161,12 @@ export default async function ConceptPage({ params }: { params: Promise<Params> 
           </h1>
           <p className="hero-fade t-lead mt-[clamp(1.75rem,4vh,2.75rem)] max-w-[46ch]">{c.text}</p>
         </div>
+
+        {id === "idgs" ? (
+          <Suspense fallback={null}>
+            <IdgsFilm />
+          </Suspense>
+        ) : null}
 
         {/* Editorial sections */}
         <div className="pt-[clamp(2rem,5vh,3.5rem)]">
