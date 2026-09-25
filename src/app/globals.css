@@ -299,14 +299,51 @@ body {
 }
 .idgs-film-preview img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; transition: opacity var(--t-base) var(--ease-out), transform var(--t-slow) var(--ease-out); }
 .idgs-film-preview:hover img { opacity: 0.88; transform: scale(1.012); }
-.idgs-film-preview__play {
-  position: absolute; left: 50%; top: 50%; display: grid; place-items: center;
-  width: 3.25rem; height: 3.25rem; transform: translate(-50%, -50%);
-  border: 1px solid rgb(255 255 255 / 80%); border-radius: 999px; color: var(--white);
-  font-size: 0.8rem; padding-left: 0.12rem; transition: background var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out);
+.idgs-film-preview__cta {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  display: flex; flex-direction: column; align-items: center; gap: 1.1rem;
 }
-.idgs-film-preview:hover .idgs-film-preview__play { color: var(--ink); background: var(--white); }
-.idgs-film-preview__label { position: absolute; left: 1rem; bottom: 0.9rem; color: var(--white); text-shadow: 0 1px 10px rgb(0 0 0 / 35%); }
+.idgs-film-preview__play {
+  position: relative; display: grid; place-items: center;
+  width: 5.5rem; height: 5.5rem; padding-left: 0.2rem;
+  border-radius: 999px; color: var(--ink); background: var(--white);
+  box-shadow: 0 0 0 0 rgb(70 159 221 / 55%), 0 8px 30px rgb(0 0 0 / 30%);
+  animation: idgs-play-glow 2.4s var(--ease-out) infinite;
+  transition: transform var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out);
+}
+.idgs-film-preview__play::before,
+.idgs-film-preview__play::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  border: 2px solid rgb(255 255 255 / 85%);
+  animation: idgs-play-ring 2.4s var(--ease-out) infinite; pointer-events: none;
+}
+.idgs-film-preview__play::after { animation-delay: 1.2s; }
+.idgs-film-preview:hover .idgs-film-preview__play,
+.idgs-film-preview:focus-visible .idgs-film-preview__play { color: var(--blue); transform: scale(1.08) rotate(-4deg); }
+.idgs-film-preview__label {
+  padding: 0.55rem 1.1rem 0.5rem 1.3rem; border-radius: 999px;
+  color: var(--white); font-size: 0.85rem; letter-spacing: 0.22em;
+  background: rgb(5 5 6 / 55%); backdrop-filter: blur(6px);
+  animation: idgs-label-breathe 3.6s ease-in-out infinite alternate;
+}
+@keyframes idgs-play-glow {
+  0%   { box-shadow: 0 0 0 0 rgb(70 159 221 / 60%), 0 8px 30px rgb(0 0 0 / 30%); }
+  70%  { box-shadow: 0 0 0 22px rgb(70 159 221 / 0%), 0 8px 30px rgb(0 0 0 / 30%); }
+  100% { box-shadow: 0 0 0 0 rgb(70 159 221 / 0%), 0 8px 30px rgb(0 0 0 / 30%); }
+}
+@keyframes idgs-play-ring {
+  0%   { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+@keyframes idgs-label-breathe {
+  from { opacity: 0.55; }
+  to   { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .idgs-film-preview__play, .idgs-film-preview__play::before, .idgs-film-preview__play::after, .idgs-film-preview__label { animation: none; }
+}
+.no-motion .idgs-film-preview__play, .no-motion .idgs-film-preview__play::before, .no-motion .idgs-film-preview__play::after, .no-motion .idgs-film-preview__label { animation: none;
+}
 .idgs-film-overlay { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: clamp(1rem, 4vw, 4rem); background: rgb(5 5 6 / 95%); }
 .idgs-film-dialog { position: relative; width: min(100%, 1440px); max-height: 100%; display: grid; place-items: center; }
 .idgs-film-player { display: block; width: 100%; max-height: calc(100dvh - clamp(2rem, 8vw, 8rem)); background: #000; object-fit: contain; }
@@ -315,7 +352,9 @@ body {
 .idgs-film-error { position: absolute; inset: 0; display: grid; place-content: center; gap: 1rem; padding: 2rem; background: rgb(5 5 6 / 82%); text-align: center; color: var(--white); }
 .idgs-film-error button { justify-self: center; color: var(--white); }
 @media (max-width: 767px) {
-  .idgs-film-preview__play { width: 3.5rem; height: 3.5rem; }
+  .idgs-film-preview__play { width: 4.25rem; height: 4.25rem; }
+  .idgs-film-preview__play svg { width: 22px; height: 22px; }
+  .idgs-film-preview__cta { gap: 0.8rem; }
   .idgs-film-overlay { padding: 1rem; }
   .idgs-film-close { right: 0; top: -2.9rem; }
 }

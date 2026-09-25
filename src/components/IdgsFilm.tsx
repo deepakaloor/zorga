@@ -119,8 +119,12 @@ export function IdgsFilm() {
         </div>
         <button ref={previewRef} type="button" className="idgs-film-preview" onClick={openFilm} aria-haspopup="dialog">
           <Image src={POSTER_SRC} width={1920} height={1080} alt="A precision engineer inspecting an aerospace engine" />
-          <span className="idgs-film-preview__play" aria-hidden>▶</span>
-          <span className="idgs-film-preview__label t-micro">Play film</span>
+          <span className="idgs-film-preview__cta">
+            <span className="idgs-film-preview__play" aria-hidden>
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg>
+            </span>
+            <span className="idgs-film-preview__label t-micro">Play film</span>
+          </span>
         </button>
       </section>
 
